@@ -1,12 +1,13 @@
-import styles from "./TaskItem.module.css";
-import { CheckIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
+import styles from "./TaskItem.module.css";
+import { CheckIcon, PencilIcon, TrashIcon } from "@heroicons/react/24/outline";
 
-const TaskItem = ({ task }) => {
+const TaskItem = ({ task , deleteTask, checkTask}) => {
   const [isCheck, setCheck] = useState(task.checked);
 
   const handleCheck = (e) => {
     setCheck(!isCheck);
+    checkTask(task.id);
   };
 
   return (
@@ -26,6 +27,20 @@ const TaskItem = ({ task }) => {
             <CheckIcon strokeWidth={2} width={24} height={24} />
           </div>
         </label>
+        <button
+          className="btn"
+          aria-label={`Edit ${task.name} task`}
+          //onClick={test}
+        >
+          <PencilIcon />
+        </button>
+        <button
+          className={`btn ${styles.delete}`} //a way to combine class and module css
+          aria-label={`Delete ${task.name} task`}
+          onClick={() => deleteTask(task.id)}
+        >
+          <TrashIcon />
+        </button>
       </div>
     </li>
   );

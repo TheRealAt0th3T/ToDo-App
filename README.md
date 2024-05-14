@@ -23,3 +23,4 @@ This is going to be a classic To-Do application where a user can write down all 
 
 - [HeroIcons](https://github.com/tailwindlabs/heroicons) was used for logos
 - [CSS Modules](https://developer.adobe.com/commerce/pwa-studio/guides/general-concepts/css-modules/#:~:text=CSS%20modules%20give%20you%20the,application%20using%20a%20modular%20approach.) benefits and how to create them
+- [Aria-label accessability](https://stackoverflow.com/questions/22039910/what-is-aria-label-and-how-should-i-use-it) why you might want to use aria-labels
