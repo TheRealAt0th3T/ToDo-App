@@ -1,12 +1,17 @@
 import { PlusCircleIcon } from "@heroicons/react/24/outline";
 import { useState } from 'react'
 
-function TaskForm() {
+function TaskForm({addTask}) {
 
   const [task, setTask] = useState("");
 
   const handleFormSubmit = (e) => {
     e.preventDefault(); //prevents browser from reloading completely
+    addTask({
+      name: task,
+      checked: false,
+      id: Date.now()
+    })
     setTask("");
   };
 
