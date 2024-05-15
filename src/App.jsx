@@ -1,10 +1,12 @@
-import { useState } from "react";
+
 import "./index.css";
 import TaskForm from "./components/TaskForm";
 import TaskList from "./components/TaskList";
 
+import useLocalStorage from "./hooks/useLocalStorage";
+
 function App() {
-  const [taskList, setTaskList] = useState([]);
+  const [taskList, setTaskList] = useLocalStorage('todo-tasks', []);
 
   //adding task to list
   const addTask = (task) => {
