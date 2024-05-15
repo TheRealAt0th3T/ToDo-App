@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "./TaskItem.module.css";
 import { CheckIcon, PencilIcon, TrashIcon } from "@heroicons/react/24/outline";
 
-const TaskItem = ({ task , deleteTask, checkTask}) => {
+const TaskItem = ({ task , deleteTask, checkTask, editMode}) => {
   const [isCheck, setCheck] = useState(task.checked);
 
   const handleCheck = (e) => {
@@ -30,7 +30,7 @@ const TaskItem = ({ task , deleteTask, checkTask}) => {
         <button
           className="btn"
           aria-label={`Edit ${task.name} task`}
-          //onClick={test}
+          onClick={() => editMode(task)}
         >
           <PencilIcon />
         </button>

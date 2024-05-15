@@ -14,7 +14,7 @@ This is going to be a classic To-Do application where a user can write down all 
 
 ## Additional Goals
 
-- [ ] User can edit and update a task item
+- [x] User can edit and update a task item
 - [ ] User can see a list with all active tasks
 - [ ] User can see a list of all completed tasks
 - [ ] User can see the date/time a task was created
