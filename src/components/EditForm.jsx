@@ -18,7 +18,11 @@ function EditForm({ editedTask, updateTask, closeEditMode }) {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    updateTask({ ...editedTask, name: updatedTask });
+    updateTask({
+      ...editedTask,
+      name: updatedTask,
+      now: new Date().toISOString(),
+    });
   };
 
   return (

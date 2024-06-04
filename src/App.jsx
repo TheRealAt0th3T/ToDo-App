@@ -31,7 +31,9 @@ function App() {
 
   const updateTask = (task) => {
     setTaskList((prevState) =>
-      prevState.map((t) => (t.id === task.id ? { ...t, name: task.name } : t))
+      prevState.map((t) =>
+        t.id === task.id ? { ...t, name: task.name, now: task.now } : t
+      )
     );
     closeEditMode();
   };

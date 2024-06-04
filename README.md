@@ -17,7 +17,8 @@ This is going to be a classic To-Do application where a user can write down all 
 - [x] User can edit and update a task item
 - [ ] User can see a list with all active tasks
 - [ ] User can see a list of all completed tasks
-- [ ] User can see the date/time a task was created
+- [x] User can see the date/time a task was created
+- [x] User can see updated date/time whenever a task is updated
 
 ### Links to additional sources that were used:
 

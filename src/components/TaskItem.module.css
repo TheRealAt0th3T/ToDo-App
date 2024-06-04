@@ -5,7 +5,7 @@
     gap: .6em;
     font-size: var(--_size);
     border: .2em solid hsl(var(--muted) / 0.8);
-    padding: .6em;
+    padding: .2em;
     border-radius: calc(var(--_radius) * 2);
   }
   

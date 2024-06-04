@@ -1,8 +1,8 @@
 import { PlusCircleIcon } from "@heroicons/react/24/outline";
-import { useState } from 'react'
+import { useState } from "react";
+import useFormatDate from "../hooks/useFormatDate";
 
-function TaskForm({addTask}) {
-
+function TaskForm({ addTask }) {
   const [task, setTask] = useState("");
 
   const handleFormSubmit = (e) => {
@@ -10,8 +10,9 @@ function TaskForm({addTask}) {
     addTask({
       name: task,
       checked: false,
-      id: Date.now()
-    })
+      id: Date.now(),
+      now: new Date().toISOString(),
+    });
     setTask("");
   };
 
@@ -22,8 +23,8 @@ function TaskForm({addTask}) {
           type="text"
           id="task"
           className="input"
-          value = {task}
-          onInput = {(e) => setTask(e.target.value)}
+          value={task}
+          onInput={(e) => setTask(e.target.value)}
           required
           //autoFocus //allows user to immediately type into field
           maxLength={50}
